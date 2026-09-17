@@ -3,149 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ברכת כלה מעוצבת בהקדשה אישית - שרית</title>
+    <title>ברכת כלה מעוצבת - שרית</title>
+    
     <!-- Tailwind CSS לעיצוב מודרני -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        // הגדרת משתנה לתמונת הרקע
+        const BG_IMG = "https://media.base44.com/images/public/6a9e5657f607df950064b2d4/9d46b6f4a_generated_image.png";
+    </script>
+
     <style>
-        body { font-family: 'Assistant', sans-serif; }
+        body { 
+            font-family: 'Assistant', sans-serif;
+            background-image: linear-gradient(rgba(239, 220, 226, 0.75), rgba(245, 235, 238, 0.85)), url('https://media.base44.com/images/public/6a9e5657f607df950064b2d4/9d46b6f4a_generated_image.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* כרטיס טופס לבן רחב, מרכזי, גבוה ויוקרתי */
+        .clean-card {
+            background: rgba(240, 231, 231, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 25px 50px -12px rgba(140, 73, 90, 0.2), 0 0 0 1px rgba(240, 222, 227, 0.8);
+        }
     </style>
 </head>
-<body class="bg-[#fdfbfc] text-gray-800 min-h-screen">
+<body class="text-gray-800">
 
     <!-- מסך ההזמנה הראשי -->
-    <div id="orderPage">
-        <!-- Header & Product Section -->
-        <header class="text-center pt-12 pb-6 px-4">
-            <h1 class="text-4xl md:text-5xl font-bold text-[#b07d89] mb-3">ברכת כלה בהקדשה אישית</h1>
-            <p class="text-lg text-gray-700 max-w-xl mx-auto mb-8">עיצוב עדין ומלכותי על אקריליק שקוף, מעוטר בפנינים וסרט, עם שמות החתן והכלה ותאריך החתונה.</p>
-
-            <!-- Product Image -->
-            <div class="flex justify-center mb-10">
-                <div class="relative group p-1 bg-white border border-gray-100 rounded-3xl shadow-xl">
-                    <img src="bracha.jpg" alt="ברכת כלה מעוצבת על אקריליק" class="w-full max-w-sm rounded-2xl">
-                    <div class="absolute inset-0 rounded-2xl bg-[#f6eef1]/20 group-hover:bg-transparent transition-all"></div>
-                </div>
-            </div>
+   <div id="orderPage">
+        <!-- Header -->
+        <header class="w-full max-w-xl mx-auto text-center pt-10 pb-6 px-4 flex flex-col items-center">
+           
+            <h1 class="text-3xl md:text-4xl font-bold text-[#8f5b68] mb-1 drop-shadow-sm">ברכת כלה בהקדשה אישית</h1>
+            <p class="text-sm text-gray-700 font-medium">עיצוב עדין ומלכותי על אקריליק שקוף בעיטור פנינים</p>
+            <!-- תמונת המוצר לדוגמה -->
+            <div class="mt-6 mb-2 flex justify-center">
+    <img src="bracha.jpg" alt="דוגמה לברכת כלה מעוצבת" class="w-64 md:w-80 max-h-96 object-cover rounded-2xl shadow-xl">
+</div>
         </header>
 
-        <!-- Main Content -->
-        <main class="max-w-2xl mx-auto px-4 pb-16">
-            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 border border-[#f0dee3]">
-                <h2 class="text-2xl font-semibold text-center mb-6 text-gray-700">מילוי פרטים להזמנה</h2>
+        <!-- Main Content - טופס רחב, גדול ופרופורציונלי שיושב מושלם באמצע המסך -->
+<main class="w-full max-w-3xl mx-auto px-4 md:px-8 pb-16">            <div class="clean-card rounded-3xl p-8 md:p-12 border border-[#f5e6ea] shadow-2xl w-full">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-[#8f5b68]">מילוי פרטים להזמנה</h2>
 
-                <!-- Form -->
-                <form id="orderForm" action="https://formspree.io/f/xbgreqaw" method="POST" class="space-y-6">
+                <form id="orderForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6 w-full">
                     
+                    <!-- הגדרות ל-Web3Forms -->
+                    <input type="hidden" name="access_key" value="e652bc5b-0029-4476-9c58-30f67b152fd7">
+                    <input type="hidden" name="subject" value="✨ הזמנה חדשה לברכת כלה!">
+                    <input type="hidden" name="from_name" value="מערכת הזמנות - ברכת כלה">
+
                     <!-- פרטי הברכה -->
-                    <div class="bg-[#fdfbfc] p-5 rounded-xl border border-[#f0dee3] space-y-5 shadow-inner">
-                        <h3 class="font-bold text-[#b07d89] text-lg border-b border-[#f0dee3] pb-2">פרטי הברכה</h3>
+                    <div class="bg-[#fcf5f6] p-6 md:p-8 rounded-2xl border border-[#ebd2cc] space-y-6 shadow-inner w-full">
+                        <h3 class="font-bold text-[#b07d89] text-xl border-b border-[#ebd2cc] pb-3 flex items-center gap-2">
+                            <span></span> פרטי הברכה
+                        </h3>
                         
-                        <div>
-                            <label class="block text-sm font-medium mb-1 text-gray-700">שמות חיבה של החתן והכלה</label>
-                            <input type="text" name="couple_nicknames" placeholder="לדוגמה: יוסי & תמי" class="w-full p-2.5 border border-[#e8ced7] rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:border-[#b07d89] focus:outline-none bg-white/70">
+                        <div class="w-full">
+                            <label class="block text-base font-medium mb-1.5 text-gray-700">שמות חיבה של החתן והכלה</label>
+                            <input type="text" name="Couple_Names" placeholder="לדוגמה: יוסי & תמי" class="w-full p-3.5 border border-[#e8ced7] rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none bg-white text-lg">
                         </div>
 
-                        <div class="p-3 bg-white/80 rounded-lg border border-[#f5e6ea]">
-                            <p class="text-xs font-bold text-[#b07d89] mb-2">פרטי הכלה (עבור נוסח: [שם הכלה] בת [שם האם])</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                <div>
+                        <!-- פרטי הכלה -->
+                        <div class="p-5 bg-white rounded-xl border border-[#f5e6ea] w-full">
+                            <p class="text-sm font-bold text-[#b07d89] mb-3">פרטי הכלה (עבור נוסח: [שם הכלה] בת [שם האם])</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="w-full">
                                     <label class="block text-sm font-medium mb-1">שם הכלה *</label>
-                                    <input type="text" name="bride_name" required placeholder="לדוגמה: תמר" class="w-full p-2.5 border border-[#e8ced7] rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:border-[#b07d89] focus:outline-none">
+                                    <input type="text" name="Bride_Name" required placeholder="לדוגמה: תמר" class="w-full p-3.5 border border-[#e8ced7] rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none text-base">
                                 </div>
-                                <div>
+                                <div class="w-full">
                                     <label class="block text-sm font-medium mb-1">שם אם הכלה *</label>
-                                    <input type="text" name="bride_mother_name" required placeholder="לדוגמה: רחל" class="w-full p-2.5 border border-[#e8ced7] rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:border-[#b07d89] focus:outline-none">
+                                    <input type="text" name="Bride_Mother" required placeholder="לדוגמה: רחל" class="w-full p-3.5 border border-[#e8ced7] rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none text-base">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="p-3 bg-white/80 rounded-lg border border-[#f5e6ea]">
-                            <p class="text-xs font-bold text-[#b07d89] mb-2">פרטי החתן (עבור נוסח: [שם החתן] בן [שם האם])</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                <div>
+                        <!-- פרטי החתן -->
+                        <div class="p-5 bg-white rounded-xl border border-[#f5e6ea] w-full">
+                            <p class="text-sm font-bold text-[#b07d89] mb-3">פרטי החתן (עבור נוסח: [שם החתן] בן [שם האם])</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="w-full">
                                     <label class="block text-sm font-medium mb-1">שם החתן *</label>
-                                    <input type="text" name="groom_name" required placeholder="לדוגמה: יוסף" class="w-full p-2.5 border border-[#e8ced7] rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:border-[#b07d89] focus:outline-none">
+                                    <input type="text" name="Groom_Name" required placeholder="לדוגמה: יוסף" class="w-full p-3.5 border border-[#e8ced7] rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none text-base">
                                 </div>
-                                <div>
+                                <div class="w-full">
                                     <label class="block text-sm font-medium mb-1">שם אם החתן *</label>
-                                    <input type="text" name="groom_mother_name" required placeholder="לדוגמה: שרה" class="w-full p-2.5 border border-[#e8ced7] rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:border-[#b07d89] focus:outline-none">
+                                    <input type="text" name="Groom_Mother" required placeholder="לדוגמה: שרה" class="w-full p-3.5 border border-[#e8ced7] rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none text-base">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
-                            <div>
-                                <label class="block text-sm font-medium mb-1">תאריך חתונה עברי</label>
-                                <input type="text" name="hebrew_date" placeholder="לדוגמה: י&quot;ב בסיוון תשפ&quot;ו" class="w-full p-2.5 border border-[#e8ced7] rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:border-[#b07d89] focus:outline-none bg-white/70">
+                        <!-- תאריכי חתונה -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 w-full">
+                            <div class="w-full">
+                                <label class="block text-base font-medium mb-1.5">תאריך חתונה עברי</label>
+                                <input type="text" id="heb_date_input" placeholder="לדוגמה: י״ב בסיוון תשפ״ו" class="w-full p-3.5 border border-[#e8ced7] rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none bg-white text-lg">
+                                <input type="hidden" name="Hebrew_Date" id="heb_date_hidden">
                             </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-1">תאריך חתונה לועזי (אם רוצים)</label>
-                                <div class="grid grid-cols-3 gap-2" dir="ltr">
-                                    <!-- יום -->
-                                    <select name="gregorian_day" class="w-full p-2.5 border border-[#e8ced7] rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:border-[#b07d89] focus:outline-none bg-white/70 text-center">
-                                        <option value="">Day</option>
-                                        <option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option>
-                                        <option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option>
-                                        <option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option>
-                                        <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option>
-                                        <option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
-                                        <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option>
-                                        <option value="31">31</option>
-                                    </select>
-
-                                    <!-- חודש -->
-                                    <select name="gregorian_month" class="w-full p-2.5 border border-[#e8ced7] rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:border-[#b07d89] focus:outline-none bg-white/70 text-center">
-                                        <option value="">Month</option>
-                                        <option value="01">01 - ינואר</option>
-                                        <option value="02">02 - פברואר</option>
-                                        <option value="03">03 - מרץ</option>
-                                        <option value="04">04 - אפריל</option>
-                                        <option value="05">05 - מאי</option>
-                                        <option value="06">06 - יוני</option>
-                                        <option value="07">07 - יולי</option>
-                                        <option value="08">08 - אוגוסט</option>
-                                        <option value="09">09 - ספטמבר</option>
-                                        <option value="10">10 - אוקטובר</option>
-                                        <option value="11">11 - נובמבר</option>
-                                        <option value="12">12 - דצמבר</option>
-                                    </select>
-
-                                    <!-- שנה -->
-                                    <select name="gregorian_year" class="w-full p-2.5 border border-[#e8ced7] rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:border-[#b07d89] focus:outline-none bg-white/70 text-center">
-                                        <option value="">Year</option>
-                                        <option value="2026">2026</option>
-                                        <option value="2027">2027</option>
-                                        <option value="2028">2028</option>
-                                        <option value="2029">2029</option>
-                                    </select>
-                                </div>
+                            <div class="w-full">
+                                <label class="block text-base font-medium mb-1.5">תאריך חתונה לועזי (אם רוצים)</label>
+                               <div class="grid grid-cols-12 gap-2" dir="ltr">
+    <select id="g_day" class="col-span-3 w-full py-3.5 px-2 border border-[#e8ced7] rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none bg-white text-center text-sm md:text-base">
+        <option value="">יום</option>
+        <option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option>
+        <option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option>
+        <option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option>
+        <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option>
+        <option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
+        <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option>
+        <option value="31">31</option>
+    </select>
+    <select id="g_month" class="col-span-5 w-full py-3.5 px-2 border border-[#e8ced7] rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none bg-white text-center text-sm md:text-base">
+        <option value="">חודש</option>
+        <option value="01">01 - ינואר</option><option value="02">02 - פברואר</option><option value="03">03 - מרץ</option><option value="04">04 - אפריל</option>
+        <option value="05">05 - מאי</option><option value="06">06 - יוני</option><option value="07">07 - יולי</option><option value="08">08 - אוגוסט</option>
+        <option value="09">09 - ספטמבר</option><option value="10">10 - אוקטובר</option><option value="11">11 - נובמבר</option><option value="12">12 - דצמבר</option>
+    </select>
+    <select id="g_year" class="col-span-4 w-full py-3.5 px-2 border border-[#e8ced7] rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none bg-white text-center text-sm md:text-base">
+        <option value="">שנה</option>
+        <option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option>
+    </select>
+</div>
+                                <input type="hidden" name="Gregorian_Date" id="g_date_hidden">
                             </div>
                         </div>
                     </div>
 
                     <!-- פרטי המזמין -->
-                    <div class="space-y-4 pt-4">
-                        <h3 class="font-bold text-gray-800 text-lg">פרטים ליצירת קשר</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium mb-1">שם המזמין/ה *</label>
-                                <input type="text" name="customer_name" required class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:outline-none bg-white/70">
+                    <div class="space-y-4 pt-4 w-full">
+                        <h3 class="font-bold text-gray-800 text-xl flex items-center gap-2">
+                            <span>📞</span> פרטים ליצירת קשר
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                            <div class="w-full">
+                                <label class="block text-base font-medium mb-1.5">שם המזמין/ה *</label>
+                                <input type="text" name="Client_Name" required class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none bg-white text-lg">
                             </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-1">מספר טלפון *</label>
-                                <input type="tel" name="customer_phone" required pattern="05[0-9]{8}" maxlength="10" placeholder="05XXXXXXXX (10 ספרות)" title="נא להזין מספר נייד תקין בן 10 ספרות" class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:outline-none bg-white/70">
+                            <div class="w-full">
+                                <label class="block text-base font-medium mb-1.5">מספר טלפון *</label>
+                                <input type="tel" id="phone_input" name="Client_Phone" required placeholder="0500000000" maxlength="10" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none bg-white text-lg" dir="ltr">
                             </div>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-1">כתובת אימייל *</label>
-                            <input type="email" name="customer_email" required class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e8ced7] focus:outline-none bg-white/70">
+                        <div class="w-full">
+                            <label class="block text-base font-medium mb-1.5">כתובת אימייל *</label>
+                            <input type="email" name="Client_Email" required class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#b07d89] focus:outline-none bg-white text-lg" dir="ltr">
                         </div>
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" id="submitBtn" class="w-full bg-[#b07d89] hover:bg-[#966a74] text-white font-bold py-3.5 px-4 rounded-lg transition duration-200 shadow-md transform hover:-translate-y-0.5">
-                        שליחת הזמנה ומעבר לתשלום
+                    <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-[#b07d89] to-[#915a67] hover:from-[#915a67] hover:to-[#774450] text-white font-bold py-4 px-6 rounded-xl transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer text-xl mt-4">
+                        שליחת הזמנה ומעבר לתשלום ✨
                     </button>
                 </form>
             </div>
@@ -153,28 +166,27 @@
     </div>
 
     <!-- מסך תשלום ואישור - מוסתר עד לאחר השליחה -->
-    <div id="paymentSection" style="display: none;" class="max-w-2xl mx-auto px-4 py-16">
-        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-[#f0dee3] text-center">
+    <div id="paymentSection" style="display: none;" class="w-full px-4 py-16">
+        <div class="clean-card rounded-3xl p-8 md:p-12 border border-[#f5e6ea] text-center shadow-2xl max-w-3xl mx-auto">
             <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold">✓</div>
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">ההזמנה התקבלה בהצלחה! 🎉</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-3">ההזמנה התקבלה בהצלחה! 🎉</h2>
             <p class="text-gray-600 mb-8 text-lg">כדי שנוכל להתחיל בעיצוב הברכה, יש לבצע תשלום של 149 ש"ח באחת מהאפשרויות הבאות:</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 text-gray-700 text-right">
-                <div class="bg-[#fdfbfc] p-5 rounded-xl border border-[#f0dee3] shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6 text-gray-700 text-right">
+                <div class="bg-[#fdfbfc] p-6 rounded-2xl border border-[#eedcd5] shadow-sm">
                     <h4 class="font-bold text-[#b07d89] text-lg mb-2">תשלום ב-Bit</h4>
-                    <p class="text-sm text-gray-600">מספר להעברה: <span class="font-bold text-gray-800 dir-ltr inline-block">050-2211526</span></p>
+                    <p class="text-base">מספר להעברה: <span class="font-bold text-gray-800 dir-ltr inline-block">050-2211526</span></p>
                     <p class="text-xs text-gray-500 mt-1">על שם: שרית</p>
                 </div>
-                <div class="bg-[#fdfbfc] p-5 rounded-xl border border-[#f0dee3] shadow-sm">
+                <div class="bg-[#fdfbfc] p-6 rounded-2xl border border-[#eedcd5] shadow-sm">
                     <h4 class="font-bold text-[#b07d89] text-lg mb-2">העברה בנקאית</h4>
-                    <p class="text-sm text-gray-600">בנק: <span class="font-bold text-gray-800">פאגי</span> (52)</p>
-                    <p class="text-sm text-gray-600">סניף: <span class="font-bold text-gray-800">183</span></p>
-                    <p class="text-sm text-gray-600">מספר חשבון: <span class="font-bold text-gray-800">824912</span></p>
+                    <p class="text-base">בנק: <strong>פאגי</strong> (52)</p>
+                    <p class="text-base">סניף: <strong>183</strong> | חשבון: <strong>824912</strong></p>
                 </div>
             </div>
             
-            <div class="bg-amber-50 border border-amber-200 p-4 rounded-lg text-amber-900 text-sm mt-6">
-                📌 לאחר ביצוע ההעברה, אנא שלחי צילום מסך של אישור התשלום למייל: <strong>sariti0533@gmail.com</strong>
+            <div class="bg-[#fdf7f8] border border-[#eedcd5] p-5 rounded-xl text-gray-700 text-base mt-6">
+                📌 לאחר ביצוע ההעברה, אנא שלחי צילום מסך של אישור התשלום למייל: <strong class="text-[#b07d89]">sariti0533@gmail.com</strong>
             </div>
         </div>
     </div>
@@ -184,34 +196,64 @@
         const orderPage = document.getElementById('orderPage');
         const paymentSection = document.getElementById('paymentSection');
         const submitBtn = document.getElementById('submitBtn');
+        const phoneInput = document.getElementById('phone_input');
+
+        // מגביל את שדה הטלפון להקלדת מספרים בלבד
+        phoneInput.addEventListener('input', function(e) {
+            this.value = this.value.replace(/\D/g, '').slice(0, 10);
+        });
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
+
+            // בדיקה ששדה הטלפון מכיל בדיוק 10 ספרות ומתחיל ב-05
+            if (phoneInput.value.length !== 10 || !phoneInput.value.startsWith('05')) {
+                alert('נא להזין מספר טלפון נייד תקין בן 10 ספרות (מתחיל ב-05).');
+                phoneInput.focus();
+                return;
+            }
+
+            // 1. טיפול בתאריך עברי
+            const hebVal = document.getElementById('heb_date_input').value.trim();
+            document.getElementById('heb_date_hidden').value = hebVal ? hebVal : 'אין';
+
+            // 2. טיפול בתאריך לועזי
+            const d = document.getElementById('g_day').value;
+            const m = document.getElementById('g_month').value;
+            const y = document.getElementById('g_year').value;
+
+            if (d && m && y) {
+                document.getElementById('g_date_hidden').value = `${d}/${m}/${y}`;
+            } else {
+                document.getElementById('g_date_hidden').value = 'אין';
+            }
+
             submitBtn.innerText = 'שולח הזמנה...';
             submitBtn.disabled = true;
 
             const formData = new FormData(form);
 
-            fetch(form.action, {
+            // שליחה דרך Web3Forms
+            fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
+                body: formData
             })
-            .then(function(response) {
-                if (response.ok) {
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
                     orderPage.style.display = 'none';
                     paymentSection.style.display = 'block';
                     window.scrollTo({ top: 0, behavior: 'instant' });
                 } else {
-                    alert('אירעה שגיאה בשליחת הטופס. אנא ודאי שכל הפרטים תקינים.');
-                    submitBtn.innerText = 'שליחת הזמנה ומעבר לתשלום';
+                    alert('שגיאה בשליחה: ' + data.message);
+                    submitBtn.innerText = 'שליחת הזמנה ומעבר לתשלום ✨';
                     submitBtn.disabled = false;
                 }
             })
-            .catch(function(error) {
-                alert('אירעה שגיאת תקשורת. אנא נסי שוב.');
-                submitBtn.innerText = 'שליחת הזמנה ומעבר לתשלום';
-                submitBtn.disabled = false;
+            .catch(() => {
+                orderPage.style.display = 'none';
+                paymentSection.style.display = 'block';
+                window.scrollTo({ top: 0, behavior: 'instant' });
             });
         });
     </script>
